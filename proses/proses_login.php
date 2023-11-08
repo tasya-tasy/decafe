@@ -10,6 +10,7 @@ if(!empty($_POST['submit_validate'])){
     $hasil = mysqli_fetch_array($query);
     if($hasil){
         $_SESSION['username_decafe'] = $username;
+        $_SESSION['level_decafe'] = $hasil['level'];
         header('location:../home');
     }else{ ?>
         <script>

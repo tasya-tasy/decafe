@@ -1,7 +1,7 @@
 <?php 
 include "proses/connect.php";
 date_default_timezone_set('asia/jakarta');
-$query =mysqli_query($conn,"SELECT tb_order.*,tb_bayar.*,nama,SUM(harga*jumlah) AS harganya FROM tb_order LEFT JOIN tb_user ON tb_user.id = tb_order.pelayan
+$query = mysqli_query($conn,"SELECT tb_order.*,tb_bayar.*,nama,SUM(harga*jumlah) AS harganya FROM tb_order LEFT JOIN tb_user ON tb_user.id = tb_order.pelayan
 LEFT JOIN tb_list_order ON tb_list_order.kode_order=tb_order.id_order
 LEFT JOIN tb_daftar_menu ON tb_daftar_menu.id = tb_list_order.menu
 LEFT JOIN tb_bayar ON tb_bayar.id_bayar = tb_order.id_order

@@ -14,9 +14,10 @@ if (!empty($_POST['input_order_validate'])) {
     } else {
 
         $query = mysqli_query($conn, "INSERT INTO tb_order (id_order,meja,pelanggan,pelayan)
-    values ('$kode_order','$meja','$pelanggan','$_SESSION[id_decafe]')");
+        values ('$kode_order','$meja','$pelanggan','".$_SESSION['id_decafe']."')");
+        
         if ($query) {
-            $message = '<script>alert("username berhasil dimasukkan");
+            $message = '<script>alert("order berhasil dimasukkan");
         window.location="../?x=orderitem&order='.$kode_order.'&meja='.$meja.'&pelanggan='.$pelanggan.'"</script>';
         } else {
             $message = '<script>alert("data gagal dimasukkan")</script>';

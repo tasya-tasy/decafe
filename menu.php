@@ -419,8 +419,8 @@ $select_kat_menu = mysqli_query($conn, "SELECT id_kat_menu,kategori_menu FROM tb
                   </th>
                   <td>
                     <div style="width:90px">
+                      <img src="assets/img/<?php echo $row['foto'] ?>" class="img-thumbnail" alt="...">
                     </div>
-                    <img src="assets/img/<?php echo $row['foto'] ?>" class="img-thumbnail" alt="...">
                   </td>
                   <td>
                     <?php echo $row['nama_menu'] ?>

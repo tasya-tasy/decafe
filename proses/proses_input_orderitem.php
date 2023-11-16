@@ -14,8 +14,7 @@ if (!empty($_POST['input_orderitem_validate'])) {
         $message = '<script>alert("Item yang dimasukkan telah ada");
         window.location="../?x=orderitem&order=' . $kode_order . '&meja=' . $meja . '&pelanggan=' . $pelanggan . '"</script>';
     } else {
-        $query = mysqli_query($conn, "INSERT INTO tb_list_order (menu,kode_order,jumlah,catatan)
-    values ('$menu','$kode_order','$jumlah','$catatan')");
+        $query = mysqli_query($conn, "INSERT INTO tb_list_order (menu,kode_order,jumlah,catatan) values ('$menu','$kode_order','$jumlah','$catatan')");
         if ($query) {
             $message = '<script>alert("Data berhasil dimasukkan");
         window.location="../?x=orderitem&order=' . $kode_order . '&meja=' . $meja . '&pelanggan=' . $pelanggan . '"</script>';
